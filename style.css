@@ -12,6 +12,21 @@ body {
 .wrapper {
     margin: auto 24px;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+p {
+    margin: 0;
+}
 a {
     color: rgb(0 0 0);
     text-decoration: none;
@@ -48,7 +63,13 @@ header {
     border-radius: 4px;
     box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
     display: flex;
-    gap: 4px;
+    gap: 8px;
+    justify-content: center;
+}
+.button-large {
+    display: inline-flex;
+    padding: 12px 20px;
+    margin: auto;
 }
 .button:hover {
     background: #A03C3C;
@@ -64,4 +85,39 @@ header {
 }
 .social-media a:hover {
     opacity: .8;
+}
+.about-us,
+.skills,
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+.skills-wrapper {
+    flex-direction: row;
+    padding-left: 24px;
+}
+.skill-item {
+    background: #F5F5F5;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    align-items: center;
+    gap: 16px;
+
+    .skill-image {
+        display: flex;
+        background: #D9D9D9;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        justify-content: center;
+    }
+
+    img {
+        display: block;
+        width: 32px;
+    }
 }
