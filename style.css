@@ -50,6 +50,7 @@ h2 {
     font-size: 1.5em;
 }
 p {
+    font-family: 'Inter', sans-serif;
     margin: 0;
 }
 a {
@@ -113,7 +114,7 @@ header {
 }
 .about-us,
 .skills,
-.skills-wrapper {
+.education {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,14 +131,15 @@ header {
         max-width: 70%;
     }
 }
-.skills-wrapper {
-    flex-direction: row;
-    padding-left: 24px;
-    justify-content: left;
-    overflow-x: auto;
+.skills-wrapper,
+.education-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 24px;
+    gap: 16px;
+    margin: 0 auto;
 }
 .skill-item {
-    min-width: 35%;
     background: #F5F5F5;
     border-radius: 4px;
     display: flex;
@@ -160,6 +162,29 @@ header {
         width: 32px;
     }
 }
+.education-item {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4, p {
+        text-align: left;
+    }
+    h4 {
+        font-size: 1.125em;
+    }
+
+    duration {
+        display: block;
+        color: rgb(0 0 0 / 60%);
+        font-size: .875em;
+    }
+
+    p {
+        color: rgb(0 0 0 / 80%);
+    }
+}
 @media screen and (min-width:760px) {
     .about-us {
         p {
@@ -167,8 +192,8 @@ header {
         }
     }
     .skills-wrapper {
-        padding-left: unset;
-        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 70%;
     }
     .skill-item {
         min-width: unset;
