@@ -185,6 +185,43 @@ header {
         color: rgb(0 0 0 / 80%);
     }
 }
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .projects-wrapper {
+        display: flex;
+        gap: 16px;
+        padding-left: 24px;
+        max-width: 100%;
+        overflow-x: auto;
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-bottom: 16px;
+
+            h4 {
+                font-size: .875em;
+            }
+
+            img {
+                max-width: 300px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: rgb(0 0 0 / 60%);
+}
+
 @media screen and (min-width:760px) {
     .about-us {
         p {
@@ -198,5 +235,9 @@ header {
     .skill-item {
         min-width: unset;
         max-width: 200px;
+    }
+    .projects {
+        max-width: 70%;
+        margin: auto;
     }
 }
